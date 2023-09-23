@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var hbs = require('express-handlebars')
+var db = require('./config/connection')
 
 var app = express();
 
@@ -29,6 +30,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+db.connectDb((err) => {
+  if (err)
+    console.log("Connection Error" + err);
+  else
+    console.log("Connected")
+})
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
