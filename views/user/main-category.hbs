@@ -1,0 +1,14 @@
+<div class="page">
+    <h1>{{main.title}}</h1>
+    <div class="main-row">
+        {{#each category}}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/public/images/photo_2023-06-14_11-45-10.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h3>{{this.heading}}</h3>
+                <p class="card-text">{{this.description}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

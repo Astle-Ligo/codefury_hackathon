@@ -15,7 +15,7 @@ router.get('/signup', (req, res) => {
 })
 
 router.get('/', function (req, res, next) {
-  res.render('user/dashboard', { loggedIn: false });
+  res.render('user/main-category', { loggedIn: false ,notdashboard : true });
 });
 
 module.exports = router;
