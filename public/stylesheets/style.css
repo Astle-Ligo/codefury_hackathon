@@ -74,3 +74,138 @@ input[type=password] {
 }
 
 /* Login Page */
+
+/* Dashboard */
+
+.main{
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+}
+
+.left-side{
+  display: flex;
+  flex-direction: column;
+  background-color: yellowgreen;
+}
+
+.profile{
+  justify-content: space-around;
+}
+
+.dashboard-box{
+  height: max-content;
+  padding-block: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: #000000 0.5rem solid;
+}
+
+.dashboard-box>a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.profile-photo{
+  background-image: url(/public/images/photo_2023-06-14_11-45-10.jpg);
+  width: 10rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: #000000;
+}
+
+/* Dashboard */
+
+/* Home */
+
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+
+
+.card:hover {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+  border-radius: 2rem;
+}
+
+.front1,
+.front2,
+.front3,
+.front4,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+  padding: 2rem;
+}
+
+.front1 {
+  background-image: url("pictures/football.jpg");
+  object-fit: cover;
+}
+
+.front2 {
+  background-image: url("pictures/dance.jpg");
+  object-fit: cover;
+}
+
+.front3 {
+  background-image: url("pictures/gaming.jpg");
+  object-fit: cover;
+}
+
+.front4 {
+  background-image: url("pictures/journalism.jpg");
+  object-fit: cover;
+}
+
+.back {
+  background-color: #000000;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+  float: left;
+  width: 20rem;
+  height: 25rem;
+  border-radius: 2rem;
+}
+
+.footer {
+  width: 100vw;
+  height: 10rem;
+  float: left;
+  padding-top: 7rem;
+}
+
+/* Home */
